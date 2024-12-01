@@ -1,0 +1,17 @@
+%% Exercise 1 
+dngPath = ' change to your path \LabProc\dng'; % change to your path 
+tiffSavePath = 'C:\Users\colorlab\Desktop\LabProc\tiff';% change to your path
+CompresedPngPath = 'C:\Users\colorlab\Desktop\LabProc\Cpng';% change to your path
+stage = 4;
+
+cd('C:\Users\colorlab\Desktop\LabProc\camera-pipeline-nonUI-master')%change to your path
+dng2tiff(dngPath, tiffSavePath, stage);
+tiff2png(CompresedPngPath, tiffSavePath);
+
+% TiffIm = imread("Ex1ImConv.tif");
+% PNGim = imread("Ex1ImConv.png");
+% 
+% BightTiffIm = 5*TiffIm;
+% BightPNGIm = 5*PNGim;
+% imshowpair(BightPNGIm,BightTiffIm, "montage")
+% title('brighten png          brighten Tiff');
